@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Manoj & Bhagya - Traditional Kandyan Wedding Invitation | 14 Years of Love</title>
+  
+  <!-- SEO & Social Meta Tags -->
+  <meta name="description" content="You are cordially invited to celebrate the Traditional Kandyan Wedding of Manoj & Bhagya. 14 Years of Love leading to our Auspicious Poruwa Ceremony at 10:04 AM on November 12, 2026.">
+  <meta property="og:title" content="Manoj & Bhagya - Traditional Kandyan Wedding Invitation">
+  <meta property="og:description" content="Join us for our traditional Kandyan wedding celebration! Poruwa Ceremony at 10:04 AM, Ring Exchange at 10:16 AM on November 12, 2026. Kindly RSVP using our Google Form.">
+  <meta property="og:image" content="assets/wed.png">
+  <meta property="og:type" content="website">
+
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Floating Particle Canvas (Jasmine Petals, Dusty Rose & Gold Dust) -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Floating Controls (Music Toggle) -->
+  <div class="floating-controls">
+    <button id="musicToggleBtn" class="control-btn" title="Toggle Traditional Wedding Music" aria-label="Toggle Music">
+      <i class="fas fa-music"></i>
+    </button>
+  </div>
+
+  <div class="app-viewport">
+    
+    <!-- ==========================================================================
+         1. TRADITIONAL KANDYAN ROYAL ENVELOPE UNBOXING EXPERIENCE
+         ========================================================================== -->
+    <div id="envelopeWrapper" class="envelope-wrapper">
+      <canvas id="seal-burst-canvas"></canvas>
+
+      <div class="envelope-hint">
+        <i class="fas fa-sparkles"></i> TAP SEAL TO OPEN INVITATION <i class="fas fa-sparkles"></i>
+      </div>
+
+      <!-- Royal Wedding Envelope Container -->
+      <div class="envelope-container">
+        <!-- Inside Card (Revealed when Envelope Opens) -->
+        <div class="envelope-card-inside">
+          <div class="card-inner-gold">
+            <div class="card-monogram">M &hearts; B</div>
+            <div class="card-names">Manoj &amp; Bhagya</div>
+            <div class="card-tag">14 YEARS OF LOVE</div>
+            <div class="card-ceremony">PORUWA CEREMONY &bull; 10:04 AM</div>
+            <div class="card-venue">Nov 12, 2026 &bull; 9:00 AM - 5:00 PM</div>
+          </div>
+        </div>
+
+        <!-- Top Envelope Flap with Clear Title & Monogram -->
+        <div class="envelope-cover-top">
+          <div class="envelope-header-text">
+            <div class="cover-motif">🌸 🪔 🌸</div>
+            <div class="cover-monogram">M &hearts; B</div>
+            <h3 class="cover-couple-title">Manoj &amp; Bhagya</h3>
+            <div class="cover-love-tag">14 YEARS OF LOVE</div>
+            <div class="cover-date-text">NOVEMBER 12, 2026 &bull; PORUWA CEREMONY 10:04 AM</div>
+          </div>
+        </div>
+
+        <!-- Bottom Envelope Pocket -->
+        <div class="envelope-cover-bottom">
+          <div class="cover-gold-line"></div>
+        </div>
+
+        <!-- Center Glowing Wax Seal Button (Positioned cleanly without overlapping text) -->
+        <div class="seal-ripple-ring"></div>
+        <button id="waxSealBtn" class="wax-seal-btn" title="Tap Wax Seal to Open Invitation" aria-label="Tap Wax Seal to Open Invitation">
+          <img src="assets/wax_seal.png" alt="Gold Wax Seal" class="wax-seal-img">
+        </button>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         2. MAIN WEDDING INVITATION CONTENT
+         ========================================================================== -->
+    <main id="invitationMain" class="invitation-main">
+      
+      <!-- HERO HEADER -->
+      <header class="hero-header">
+        <div class="gold-border-frame"></div>
+        <div class="traditional-motif-icon">🌸 🪔 🌸</div>
+        <div class="monogram-badge">M &hearts; B</div>
+        <div class="save-the-date-tag">TRADITIONAL KANDYAN WEDDING</div>
+        <h1 class="couple-names">
+          Manoj <span>&amp;</span> Bhagya
+        </h1>
+        <p class="hero-tagline">
+          Are getting married!
+        </p>
+
+        <div class="love-badge">
+          <i class="fas fa-heart"></i>
+          14 Years of Love &bull; Poruwa Ceremony
+        </div>
+      </header>
+
+      <!-- COUNTDOWN TIMER SECTION -->
+      <section class="section-card">
+        <div class="section-title">Counting Down</div>
+        <div class="section-subtitle">To Our Auspicious Nekatha</div>
+        <div class="gold-divider"></div>
+
+        <div class="countdown-grid">
+          <div class="countdown-item">
+            <div id="days" class="countdown-num">00</div>
+            <div class="countdown-label">Days</div>
+          </div>
+          <div class="countdown-item">
+            <div id="hours" class="countdown-num">00</div>
+            <div class="countdown-label">Hours</div>
+          </div>
+          <div class="countdown-item">
+            <div id="minutes" class="countdown-num">00</div>
+            <div class="countdown-label">Mins</div>
+          </div>
+          <div class="countdown-item">
+            <div id="seconds" class="countdown-num">00</div>
+            <div class="countdown-label">Secs</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR STORY & 14 YEARS OF LOVE SECTION -->
+      <section class="section-card">
+        <div class="section-title">Our Love Story</div>
+        <div class="section-subtitle">14 Years of Love</div>
+        <div class="gold-divider"></div>
+
+        <div class="story-photo-box">
+          <img src="assets/wed.png" alt="Manoj and Bhagya Wedding Couple Photo">
+        </div>
+
+        <p class="story-quote">
+          "From our first memory to 14 beautiful years of laughter, growth, and unconditional togetherness. <span class="highlight-years">14 years of love</span> have brought Manoj & Bhagya to this magical day as we join hands in traditional Sri Lankan marriage!"
+        </p>
+
+        <!-- 14 Years Milestones Cards -->
+        <div class="milestones-grid">
+          <div class="milestone-card">
+            <div class="milestone-year">2012</div>
+            <div class="milestone-info">
+              <h4>First Spark of Love</h4>
+              <p>Where our beautiful 14-year journey began.</p>
+            </div>
+          </div>
+
+          <div class="milestone-card">
+            <div class="milestone-year">2017</div>
+            <div class="milestone-info">
+              <h4>Adventures & Growth</h4>
+              <p>5 years of building unforgettable memories.</p>
+            </div>
+          </div>
+
+          <div class="milestone-card">
+            <div class="milestone-year">2022</div>
+            <div class="milestone-info">
+              <h4>A Decade of Devotion</h4>
+              <p>Celebrating 10 years together and promising a forever.</p>
+            </div>
+          </div>
+
+          <div class="milestone-card">
+            <div class="milestone-year">2026</div>
+            <div class="milestone-info">
+              <h4>The Traditional Wedding Day</h4>
+              <p>14 years of love crowned with our Poruwa ceremony.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AUSPICIOUS PORUWA CEREMONY FEATURE CARD -->
+      <section class="poruwa-feature-card">
+        <div class="poruwa-badge">Sacred Auspicious Moment (නැකත)</div>
+        <h3 class="poruwa-card-title">
+          Traditional Poruwa Ceremony
+        </h3>
+        
+        <div class="poruwa-time-grid">
+          <div class="time-card-highlight">
+            <div class="time-card-icon"><i class="fas fa-sun"></i></div>
+            <div class="time-card-label">Poruwa Ceremony</div>
+            <div class="time-card-value">10:04 AM</div>
+          </div>
+          <div class="time-card-highlight">
+            <div class="time-card-icon"><i class="fas fa-ring"></i></div>
+            <div class="time-card-label">Ring Exchange</div>
+            <div class="time-card-value">10:16 AM</div>
+          </div>
+        </div>
+
+        <p class="poruwa-desc">
+          We warmly request your presence as Manoj & Bhagya ascend the sacred Magul Poruwa at the auspicious Nekatha of 10:04 AM to exchange rings at 10:16 AM and receive traditional blessings.
+        </p>
+
+        <!-- Poruwa Ritual Highlights -->
+        <div class="rituals-grid">
+          <div class="ritual-item">
+            <div class="ritual-icon"><i class="fas fa-gem"></i></div>
+            <div class="ritual-title">Ascending Poruwa</div>
+            <div class="ritual-time">10:04 AM</div>
+          </div>
+          <div class="ritual-item">
+            <div class="ritual-icon"><i class="fas fa-ring"></i></div>
+            <div class="ritual-title">Ring Exchange</div>
+            <div class="ritual-time">10:16 AM</div>
+          </div>
+          <div class="ritual-item">
+            <div class="ritual-icon"><i class="fas fa-hands-praying"></i></div>
+            <div class="ritual-title">Jayamangala Gatha</div>
+            <div class="ritual-time">10:45 AM</div>
+          </div>
+          <div class="ritual-item">
+            <div class="ritual-icon"><i class="fas fa-utensils"></i></div>
+            <div class="ritual-title">Kiri Bath Blessing</div>
+            <div class="ritual-time">10:55 AM</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EVENT DETAILS & LOCATION SECTION -->
+      <section class="section-card">
+        <div class="section-title">Wedding Details</div>
+        <div class="section-subtitle">Date, Time & Venue</div>
+        <div class="gold-divider"></div>
+
+        <div class="event-info-list">
+          <div class="event-info-item">
+            <div class="event-icon"><i class="fas fa-calendar-check"></i></div>
+            <div class="event-details">
+              <h4>Wedding Date</h4>
+              <p>Thursday, November 12, 2026</p>
+            </div>
+          </div>
+
+          <div class="event-info-item">
+            <div class="event-icon"><i class="fas fa-clock"></i></div>
+            <div class="event-details">
+              <h4>Event Hours</h4>
+              <p>9:00 AM – 5:00 PM</p>
+            </div>
+          </div>
+
+          <div class="event-info-item">
+            <div class="event-icon"><i class="fas fa-hand-holding-heart"></i></div>
+            <div class="event-details">
+              <h4>Auspicious Highlights</h4>
+              <p>Poruwa: 10:04 AM &bull; Ring Exchange: 10:16 AM</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 22px; text-align: center;">
+          <a href="https://share.google/Jmm8KmMtpkvWBadur" target="_blank" rel="noopener" class="btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px;">
+            <i class="fas fa-map-marked-alt"></i> Open Google Map Location
+          </a>
+        </div>
+      </section>
+
+      <!-- DAY SCHEDULE TIMELINE SECTION -->
+      <section class="section-card">
+        <div class="section-title">Schedule of Events</div>
+        <div class="section-subtitle">9:00 AM to 5:00 PM</div>
+        <div class="gold-divider"></div>
+
+        <div class="timeline-box">
+          <div class="timeline-step">
+            <div class="timeline-time">09:00 AM</div>
+            <div class="timeline-title">Arrival of Guests & Traditional Magul Bera Welcome</div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-time">09:30 AM</div>
+            <div class="timeline-title">Arrival of Groom & Bride</div>
+          </div>
+
+          <div class="timeline-step special">
+            <div class="timeline-time">10:04 AM ✨</div>
+            <div class="timeline-title">Auspicious Poruwa Ceremony Begins (නැකත)</div>
+          </div>
+
+          <div class="timeline-step special">
+            <div class="timeline-time">10:16 AM ✨</div>
+            <div class="timeline-title">Auspicious Ring Exchange (නැකත)</div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-time">10:45 AM</div>
+            <div class="timeline-title">Jayamangala Gatha</div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-time">10:55 AM</div>
+            <div class="timeline-title">Kiri Bath &amp; Kevum Blessing</div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-time">12:30 PM</div>
+            <div class="timeline-title">Grand Sri Lankan Wedding Feast & Reception</div>
+          </div>
+
+          <div class="timeline-step special">
+            <div class="timeline-time">04:30 PM ✨</div>
+            <div class="timeline-title">Going Away Ceremony</div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-time">05:00 PM</div>
+            <div class="timeline-title">Event Conclusion</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE WALL OF LOVE / GUESTBOOK SECTION -->
+      <section class="section-card">
+        <div class="section-title">Wall of Love</div>
+        <div class="section-subtitle">Leave Your Blessings</div>
+        <div class="gold-divider"></div>
+
+        <div id="wishesBoard" class="wishes-board">
+          <!-- Dynamic user wishes loaded here (sample data removed) -->
+        </div>
+
+        <form id="wishForm" style="margin-top: 15px;">
+          <div class="form-group">
+            <input type="text" id="wishName" class="form-input" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <textarea id="wishMessage" class="form-textarea" rows="2" placeholder="Write your warm blessing for Manoj & Bhagya..." required></textarea>
+          </div>
+          <button type="submit" class="btn-secondary" style="width: 100%; border-color: var(--primary-gold); background: #FFF;">
+            <i class="fas fa-heart" style="color: var(--rosebud-main);"></i> Post Blessing on Wall
+          </button>
+        </form>
+      </section>
+
+      <!-- RSVP CONTACT & GOOGLE FORM SECTION -->
+      <section class="section-card" id="rsvp">
+        <div class="section-title">RSVP & Participation</div>
+        <div class="section-subtitle">Kindly Confirm Your Presence</div>
+        <div class="gold-divider"></div>
+
+        <!-- RSVP Deadline Notice -->
+        <div class="rsvp-notice-box">
+          <div class="rsvp-deadline">
+            <i class="fas fa-envelope-open-text" style="color: var(--rosebud-dark); margin-right: 6px;"></i>
+            Kindly confirm your participation via our Google Form
+          </div>
+          <div class="rsvp-appreciation">
+            "Your presence will make our special day truly blessed!"
+          </div>
+        </div>
+
+        <!-- Primary Google Form RSVP Link -->
+        <div style="text-align: center; margin: 20px 0;">
+          <a href="https://forms.gle/p1BcPYw2XSjJ6oFF6" target="_blank" rel="noopener" class="btn-primary btn-rsvp-google" style="text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px; padding: 16px 24px; font-size: 1.05rem; font-weight: 700; border-radius: 30px; box-shadow: 0 8px 25px rgba(158, 79, 99, 0.4);">
+            <i class="fab fa-google" style="font-size: 1.2rem;"></i> Click Here to RSVP via Google Form
+          </a>
+        </div>
+
+        <!-- Direct RSVP Contacts -->
+        <div class="contact-box-wrapper">
+          <h4 style="font-family: var(--font-heading); font-size: 0.85rem; color: var(--rosebud-dark); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 1px;">Direct Contact Numbers</h4>
+          
+          <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;">
+            <a href="tel:0717900456" class="contact-chip">
+              <i class="fas fa-phone-alt"></i> Manoj: 071 790 0456
+            </a>
+            
+            <a href="tel:0706666456" class="contact-chip">
+              <i class="fas fa-phone-alt"></i> Bhagya: 070 666 6456
+            </a>
+          </div>
+        </div>
+
+        <div class="action-buttons-group" style="margin-top: 24px;">
+          <button id="addToCalendarBtn" class="btn-secondary">
+            <i class="far fa-calendar-plus"></i> Add to Google Calendar
+          </button>
+
+          <button id="downloadIcalBtn" class="btn-secondary">
+            <i class="fas fa-file-export"></i> Download Apple Calendar (.ics)
+          </button>
+          
+          <button id="shareWhatsappBtn" class="btn-secondary">
+            <i class="fab fa-whatsapp"></i> Share Invitation on WhatsApp
+          </button>
+
+          <button id="replayEnvelopeBtn" class="btn-secondary">
+            <i class="fas fa-envelope-open-text"></i> Replay Envelope Opening
+          </button>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="invitation-footer">
+        <p>14 Years of Love &amp; Togetherness</p>
+        <p style="margin-top: 6px;">With Love <span class="footer-heart">♥</span> Manoj &amp; Bhagya</p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- TOAST NOTIFICATION BOX -->
+  <div id="toastMsg" class="toast-msg"></div>
+
+  <!-- JavaScript Engine -->
+  <script src="script.js"></script>
+</body>
+</html>
